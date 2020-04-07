@@ -107,3 +107,30 @@ class(majors10_factor)
 ```{r cars}
 levels(majors10_factor)
 ```
+
+
+台北 2020-03-18 13:52:40
+```{r cars}
+library(lubridate)
+tpeTime <- ymd_hms("2020-03-18 13:52:40",
+        tz="Asia/Taipei")
+```
+
+葡萄牙 Mar.18, 2020, 05:52:40
+```{r cars}
+pgTime <- mdy_hms("Mar.18, 2020, 05:52:40",
+                  tz="Europe/Lisbon")
+```
+
+```{r cars}
+with_tz(tpeTime, tzone="UTC")
+with_tz(pgTime, tzone="UTC")
+```
+
+```{r}
+studentTime <- c(
+  ymd_hms("2020-03-04T06:43:29Z"),
+  ymd_hms("2020-03-11 14:22:32",tz="Asia/Taipei"),
+  ymd_hms("2020-03-11 14:22:32",tz="Asia/Taipei"))
+studentTime
+```
