@@ -80,6 +80,7 @@ listExample$`學期`
 ```
 
 ```{r}
+library(jsonlite)
 fromJSON("http://data.ntpc.gov.tw/api/v1/rest/datastore/382000000A-000157-002",
          simplifyDataFrame = F) -> newTaipeiCityVaccine
 ```
@@ -129,6 +130,7 @@ str(listExample[c(T,T)]) # 要，要
 ```
 
 ```{r}
+library(jsonlite)
 fromJSON("https://www.dropbox.com/s/qnm9bnz7vccrvcz/taipeiNightMarkets.json?dl=1", simplifyDataFrame = F) -> taipeiNightMarkets
 names(taipeiNightMarkets)
 c(T,F,F,F,T,F,
